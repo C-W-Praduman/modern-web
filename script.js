@@ -19,7 +19,7 @@ gsap.to("#main", {
     scrollTrigger:{
         trigger:"#main",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"top -50%",
         end:"top -100%",
         scrub:2
@@ -53,8 +53,36 @@ headtext.forEach((elem)=>{
 })
 
 gsap.from("#about-us img, .about-div",{
+    y:55,
+    opacity:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:"#about-us",
+        scroller:"body",
+        // markers:true,
+        start:"top 70%",
+        end:"top  65%",
+        scrub:2
+    }
+})
+gsap.from("#page1 h1,h2,p",{
     y:60,
     opacity:0,
     duration:1,
+    delay:1,
     stagger:0.4
+})
+
+gsap.from(".card",{
+    scale:0.5,
+    opacity:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:"#cards-container",
+        scroller:"body",
+        // markers:true,
+        start:"top 60%",
+        end:"top  52%",
+        scrub:2
+    }
 })
